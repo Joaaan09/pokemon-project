@@ -2,8 +2,6 @@ import { useEffect, useState } from "react"
 import "./PokemonCard.css"
 import Swal from 'sweetalert2';
 
-
-
 function PokemonCard(props) {
 
     const {pokemon} = props;

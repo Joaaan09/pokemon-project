@@ -1,4 +1,5 @@
 import {  useState } from 'react'
+import "./GetForm.css"
 
 function GetForm(props) {
     const [from, setFrom] = useState(1);
