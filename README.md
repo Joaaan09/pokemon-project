@@ -29,9 +29,9 @@ Asegúrate de tener **Node.js** instalado y ejecuta:
 
 ### 4️⃣ Ejecutar el servidor de desarrollo
 ```sh
- npm start
+ npm run dev
 ```
-Esto abrirá la aplicación en tu navegador en `http://localhost:3000/`.
+Esto abrirá la aplicación en tu navegador en `http://localhost:5173/`.
 
 ## 🛠️ Tecnologías utilizadas
 - **React**: Framework principal.
