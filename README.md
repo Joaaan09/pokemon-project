@@ -37,6 +37,7 @@ Esto abrirá la aplicación en tu navegador en `http://localhost:5173/`.
 - **React**: Framework principal.
 - **PokéAPI**: Fuente de datos.
 - **CSS**: Estilos de la interfaz.
+- **SweetAlert2**: Libreria de JS para los popups
 
 ## 📸 Capturas de pantalla
 _Añade aquí imágenes de la aplicación en funcionamiento_
