@@ -2,34 +2,25 @@ import {  useState } from 'react'
 import "./GetForm.css"
 
 function GetForm(props) {
-    const [from, setFrom] = useState(1);
-    const [to, setTo] = useState(10);   
+    const [name, setName] = useState('');
 
-    const handleFromInput = (e) => {
-        setFrom(e.target.value);
-    }
-
-    
-    const handleToInput = (e) => {
-        setTo(e.target.value);
+    const handleName = (e) => {
+        setName(e.target.value);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.getPokemons(from, to);
+        props.getPokemons(name);
         
     }
 
   return (
     <form onSubmit={handleSubmit}>
         <fieldset>
-            <label htmlFor="from-pokemon">From: </label>
-            <input type="number" id='from-pokemon' min={1} onChange={handleFromInput} />
+            <label htmlFor="from-pokemon">Nombre: </label>
+            <input type="text" id='from-pokemon' onChange={handleName} />
         </fieldset>
-        <fieldset>
-            <label htmlFor="to-pokemon">To: </label>
-            <input type="number" id='to-pokemon' onChange={handleToInput} />
-        </fieldset>
+
         <button>Get Pokemon!</button>
     </form>
   )

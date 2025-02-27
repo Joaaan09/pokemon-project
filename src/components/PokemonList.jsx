@@ -30,13 +30,25 @@ function PokemonList(props) {
         setPokemons(pkmnArr);
     }
 
+    const getPokemon = async (name) => {
+        const pkmnArr = [];
+        if(name){
+            const pokemon = await fetchPokemon(name)
+            pkmnArr.push(pokemon)
+            setPokemons(pkmnArr);
+        }else{
+            getPokemons(1, 151);
+        }
+       
+    }
+
     const pokemonCards = pokemons.map((pokemon) => {
         return <PokemonCard key={pokemon.id} pokemon={pokemon} selectPokemon={props.selectPokemon} />
     })
 
     return (
         <div>
-            <GetForm getPokemons={getPokemons}></GetForm>
+            <GetForm getPokemons={getPokemon}></GetForm>
             <ul className='pokemon-list'>
                 {pokemonCards}
             </ul>
